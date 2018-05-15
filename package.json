@@ -1,39 +1,42 @@
 {
-  "name": "snoowrap",
-  "version": "1.15.2",
-  "license": "MIT",
-  "description": "A JavaScript wrapper for the reddit API",
-  "main": "dist/snoowrap.js",
-  "scripts": {
-    "compile": "babel -q -d dist/ src/",
-    "lint": "eslint --ignore-path .gitignore . --cache",
-    "test": "npm run lint && npm run test:mocha",
-    "test:mocha": "npm run compile && mocha --compilers js:babel-core/register test/snoowrap.spec.js",
-    "test:browser": "npm run compile && browserify --im test/snoowrap.spec.js -o test/_browser.spec.js -t [ babelify ] && open test/run-tests.html",
-    "smoketest": "npm run test -- -g 'smoketest'",
-    "build-docs": "scripts/build_docs.sh",
-    "bundle-size": "npm run build-docs && gzip -c doc/snoowrap-v$(npm info . version).min.js | wc -c | xargs",
-    "coverage": "istanbul cover _mocha -- --compilers js:babel-core/register test/snoowrap.spec.js"
+  "_from": "snoowrap",
+  "_id": "snoowrap@1.15.2",
+  "_inBundle": false,
+  "_integrity": "sha512-h+JZA9edD4+cm3iuehucc/7VDhKuzY7EGqkHpPy+67OTpobswm6zVOHw5XrIzp9zsazvVu1Pg29NC/AhQ636AA==",
+  "_location": "/snoowrap",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "snoowrap",
+    "name": "snoowrap",
+    "escapedName": "snoowrap",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
-  "files": [
-    "dist/"
+  "_requiredBy": [
+    "#USER",
+    "/"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/not-an-aardvark/snoowrap.git"
+  "_resolved": "https://registry.npmjs.org/snoowrap/-/snoowrap-1.15.2.tgz",
+  "_shasum": "2086fcb911c64356c04a6e601e2eed23079acaa4",
+  "_spec": "snoowrap",
+  "_where": "C:\\Users\\Packer\\Desktop\\discord-reddit-flair-bot",
+  "author": {
+    "name": "not-an-aardvark",
+    "email": "not-an-aardvark@users.noreply.github.com"
   },
-  "keywords": [
-    "reddit",
-    "api",
-    "wrapper",
-    "praw",
-    "snoo"
-  ],
-  "author": "not-an-aardvark <not-an-aardvark@users.noreply.github.com>",
+  "browser": {
+    "fs": false,
+    "request-promise": false,
+    "util": false,
+    "ws": false
+  },
   "bugs": {
     "url": "https://github.com/not-an-aardvark/snoowrap/issues"
   },
-  "homepage": "https://github.com/not-an-aardvark/snoowrap",
+  "bundleDependencies": false,
   "dependencies": {
     "bluebird": "^3.4.1",
     "lodash": "^4.5.1",
@@ -41,6 +44,8 @@
     "request-promise": "^3.0.0",
     "ws": "^1.1.1"
   },
+  "deprecated": false,
+  "description": "A JavaScript wrapper for the reddit API",
   "devDependencies": {
     "babel-cli": "^6.14.0",
     "babel-plugin-lodash": "^3.2.6",
@@ -65,15 +70,39 @@
     "jsdoc": "^3.4.0",
     "mocha": "^3.0.2",
     "moment": "^2.14.1",
-    "uglify-js": "git://github.com/mishoo/UglifyJS2/#1db50c3b169ee4195e1935013d6721628eb5b4bd"
+    "uglify-js": "git://github.com/mishoo/UglifyJS2.git#1db50c3b169ee4195e1935013d6721628eb5b4bd"
   },
   "engines": {
     "node": ">=4.0.0"
   },
-  "browser": {
-    "fs": false,
-    "request-promise": false,
-    "util": false,
-    "ws": false
-  }
+  "files": [
+    "dist/"
+  ],
+  "homepage": "https://github.com/not-an-aardvark/snoowrap",
+  "keywords": [
+    "reddit",
+    "api",
+    "wrapper",
+    "praw",
+    "snoo"
+  ],
+  "license": "MIT",
+  "main": "dist/snoowrap.js",
+  "name": "snoowrap",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/not-an-aardvark/snoowrap.git"
+  },
+  "scripts": {
+    "build-docs": "scripts/build_docs.sh",
+    "bundle-size": "npm run build-docs && gzip -c doc/snoowrap-v$(npm info . version).min.js | wc -c | xargs",
+    "compile": "babel -q -d dist/ src/",
+    "coverage": "istanbul cover _mocha -- --compilers js:babel-core/register test/snoowrap.spec.js",
+    "lint": "eslint --ignore-path .gitignore . --cache",
+    "smoketest": "npm run test -- -g 'smoketest'",
+    "test": "npm run lint && npm run test:mocha",
+    "test:browser": "npm run compile && browserify --im test/snoowrap.spec.js -o test/_browser.spec.js -t [ babelify ] && open test/run-tests.html",
+    "test:mocha": "npm run compile && mocha --compilers js:babel-core/register test/snoowrap.spec.js"
+  },
+  "version": "1.15.2"
 }
